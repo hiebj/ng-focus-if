@@ -4,7 +4,7 @@ A simple attribute directive that will trigger focus on an element under specifi
 
 ## Usage
 
-Include `autofocus.js` in your build or directly with a `<script>` tag and require the module in your module definition:
+Include `autofocus.min.js` in your build or directly with a `<script>` tag and require the module in your module definition:
 
 ```js
 angular
