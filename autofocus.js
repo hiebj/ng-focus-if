@@ -1,7 +1,7 @@
 (function() {
     'use strict';
     angular
-        .module('ng-autofocus', [])
+        .module('autofocus', [])
         .directive('autofocus', Autofocus);
 
     function Autofocus($timeout) {

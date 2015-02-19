@@ -7,7 +7,7 @@
             tpl = '<input type="text" autofocus="{{watchProperty}}" autofocus-delay="{{delay}}" />',
             element;
 
-        beforeEach(module('ng-autofocus'));
+        beforeEach(module('autofocus'));
 
         beforeEach(function() {
             jasmine.addMatchers({

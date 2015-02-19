@@ -4,6 +4,16 @@ A simple attribute directive that will trigger focus on an element under specifi
 
 ## Usage
 
+Include `autofocus.js` in your build or directly with a `<script>` tag and require the module in your module definition:
+
+```js
+angular
+    .module('App', [
+        'autofocus',
+        ... // other dependencies
+    ]);
+```
+
 To immediately focus an element upon rendering:
 ```html
 <input autofocus />
@@ -24,4 +34,3 @@ To focus an element after a specified delay when a specified conditional `$scope
 <!-- controllerAs -->  
 <input autofocus="focusInput" autofocus-delay="500" />
 ```
-
