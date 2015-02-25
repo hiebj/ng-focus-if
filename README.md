@@ -1,4 +1,7 @@
 # ng-autofocus
+[![NPM version][npm-image]][npm-url]
+[![Downloads][downloads-image]][npm-url]
+[![devDependency Status][david-image]][david-url]
 
 A simple attribute directive that will trigger focus on an element under specified conditions.
 
@@ -43,3 +46,8 @@ To focus an element after a specified delay when a specified conditional `$scope
 ```html
 <input autofocus="focusInput" autofocus-delay="500" />
 ```
+[david-image]: https://david-dm.org/hiebj/ng-autofocus/dev-status.svg
+[david-url]: https://david-dm.org/hiebj/ng-autofocus#info=devDependencies
+[downloads-image]: http://img.shields.io/npm/dm/ng-autofocus.svg
+[npm-image]: http://img.shields.io/npm/v/ng-autofocus.svg
+[npm-url]: https://npmjs.org/package/ng-autofocus
