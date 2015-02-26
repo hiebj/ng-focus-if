@@ -5,13 +5,13 @@
         .directive('autofocus', Autofocus);
 
     function Autofocus($timeout) {
-        function link($scope, element, attrs) {
-            var dom = element[0],
-                delay = attrs.autofocusDelay;
+        function link($scope, $element, $attrs) {
+            var dom = $element[0],
+                delay = $attrs.autofocusDelay;
 
-            if (attrs.autofocus) {
-                focusIf($scope[attrs.autofocus]);
-                $scope.$watch(attrs.autofocus, focusIf);
+            if ($attrs.autofocus) {
+                focusIf($scope[$attrs.autofocus]);
+                $scope.$watch($attrs.autofocus, focusIf);
             } else {
                 focusIf(true);
             }

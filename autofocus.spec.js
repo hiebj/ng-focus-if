@@ -60,7 +60,7 @@
         }
 
         function compile() {
-            element = $compile(tpl, $scope)($scope);
+            element = $compile(tpl)($scope);
             angular.element(document.body).append(element);
         }
 
