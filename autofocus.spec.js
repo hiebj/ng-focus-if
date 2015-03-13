@@ -4,6 +4,7 @@
         var $scope,
             $compile,
             $timeout,
+            $document,
             tpl = '<input type="text" autofocus="{{watchProperty}}" autofocus-delay="{{delay}}" />',
             element;
 
@@ -32,10 +33,11 @@
             });
         });
 
-        beforeEach(inject(function($rootScope, _$compile_, _$timeout_) {
+        beforeEach(inject(function($rootScope, _$compile_, _$timeout_, _$document_) {
             $scope = $rootScope.$new();
             $compile = _$compile_;
             $timeout = _$timeout_;
+            $document = _$document_;
         }));
 
         afterEach(function() {
@@ -61,7 +63,7 @@
 
         function compile() {
             element = $compile(tpl)($scope);
-            angular.element(document.body).append(element);
+            angular.element($document[0].body).append(element);
         }
 
         function flush() {
