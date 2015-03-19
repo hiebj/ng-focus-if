@@ -11,6 +11,12 @@ It is available through NPM:
 npm install ng-autofocus
 ```
 
+Or, via bower:
+
+```shell
+bower install hiebj/ng-autofocus --save
+```
+
 ## Usage
 
 Include `autofocus.min.js` in your build or directly with a `<script>` tag and require the module in your module definition:
