@@ -1,0 +1,26 @@
+{
+  "name": "ng-autofocus",
+  "version": "0.0.10",
+  "homepage": "https://github.com/hiebj/ng-autofocus",
+  "authors": [
+    "Jonathan Hieb"
+  ],
+  "description": "A simple AngularJS attribute directive that will trigger focus on an element under specified conditions",
+  "main": "autofocus.js",
+  "keywords": [
+    "angular",
+    "angularjs",
+    "directive",
+    "autofocus",
+    "focus",
+    "delay"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
