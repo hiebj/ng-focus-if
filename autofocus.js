@@ -2,40 +2,25 @@
     'use strict';
     angular
         .module('autofocus', [])
-        .directive('autofocus', Autofocus)
-        .directive('autoselect', Autoselect);
+        .directive('autofocus', Autofocus);
 
     function Autofocus($timeout) {
         function link($scope, $element, $attrs) {
-            var dom = $element[0],
-                delay = $attrs.autofocusDelay;
+            var dom = $element[0];
 
             if ($attrs.autofocus) {
-                focusIf($scope[$attrs.autofocus]);
                 $scope.$watch($attrs.autofocus, focusIf);
             } else {
                 focusIf(true);
             }
 
             function focusIf(condition) {
-                delay = delay || 0;
                 if (condition) {
                     $timeout(function() {
                         dom.focus();
-                    }, delay);
+                    }, $scope.$eval($attrs.autofocusDelay) || 0);
                 }
             }
-        }
-
-        return {
-            restrict: 'A',
-            link: link
-        };
-    }
-
-    function Autoselect() {
-        function link($scope, $element, $attrs) {
-            $element.on('focus', $element[0].select);
         }
 
         return {

@@ -9,7 +9,7 @@ module.exports = function(config) {
       'jasmine'
     ],
     browsers: [
-      'PhantomJS2'
+      'PhantomJS'
     ],
     reporters: [
       'spec'

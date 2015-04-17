@@ -15,16 +15,14 @@
                 toHaveFocus: function() {
                     return {
                         compare: function(dom) {
-                            var pass;
-                            /* global Node:false */
+                            var focused;
                             if (!(dom instanceof Node)) {
                                 dom = dom[0];
                             }
-                            /* jshint eqeqeq:false */
-                            pass = dom == document.activeElement;
+                            focused = dom == document.activeElement;
                             return {
-                                pass: pass,
-                                message: pass ? 'Expected ' + dom + ' not to have focus'
+                                pass: focused,
+                                message: focused ? 'Expected ' + dom + ' not to have focus'
                                     : 'Expected ' + dom + ' to have focus'
                             };
                         }
@@ -73,37 +71,33 @@
         }
 
         describe('<input autofocus="watchProperty">', function() {
-            beforeEach(propertyChangeBeforeEach);
-
-            it('should not have focus immediately when $scope.watchProperty is falsy', falsyPropertyChangeTest);
-
-            it('should have focus immediately when $scope.watchProperty is truthy', truthyPropertyChangeTest);
+            beforeEach(watchBeforeEach);
+            it('should not have focus immediately when $scope.watchProperty is falsy', falsyWatchTest);
+            it('should have focus immediately when $scope.watchProperty is truthy', truthyWatchTest);
         });
 
         describe('<input autofocus="watchProperty" autofocus-delay="500">', function() {
             beforeEach(function() {
                 $scope.delay = 500;
-                propertyChangeBeforeEach();
+                watchBeforeEach();
             });
-
-            it('should not have focus after 500ms when $scope.autofocus is falsy', falsyPropertyChangeTest);
-
-            it('should have focus after 500ms when $scope.autofocus is truthy', truthyPropertyChangeTest);
+            it('should not have focus after 500ms when $scope.autofocus is falsy', falsyWatchTest);
+            it('should have focus after 500ms when $scope.autofocus is truthy', truthyWatchTest);
         });
 
-        function propertyChangeBeforeEach() {
+        function watchBeforeEach() {
             $scope.watchProperty = 'autofocus';
             $scope.autofocus = false;
             compile();
         }
 
-        function falsyPropertyChangeTest() {
+        function falsyWatchTest() {
             $timeout.verifyNoPendingTasks();
             expect(element).not.toHaveFocus();
         }
 
-        function truthyPropertyChangeTest() {
-            falsyPropertyChangeTest();
+        function truthyWatchTest() {
+            falsyWatchTest();
             $scope.autofocus = true;
             $scope.$digest();
             flush();
