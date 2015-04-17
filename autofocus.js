@@ -2,7 +2,8 @@
     'use strict';
     angular
         .module('autofocus', [])
-        .directive('autofocus', Autofocus);
+        .directive('autofocus', Autofocus)
+        .directive('autoselect', Autoselect);
 
     function Autofocus($timeout) {
         function link($scope, $element, $attrs) {
@@ -24,6 +25,17 @@
                     }, delay);
                 }
             }
+        }
+
+        return {
+            restrict: 'A',
+            link: link
+        };
+    }
+
+    function Autoselect() {
+        function link($scope, $element, $attrs) {
+            $element.on('focus', $element[0].select);
         }
 
         return {
