@@ -15,12 +15,10 @@
     "focus",
     "delay"
   ],
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://raw.githubusercontent.com/hiebj/ng-autofocus/master/LICENSE"
-    }
-  ],
+  "licenses": [{
+    "type": "MIT",
+    "url": "https://raw.githubusercontent.com/hiebj/ng-autofocus/master/LICENSE"
+  }],
   "devDependencies": {
     "angular": "^1.3.15",
     "angular-mocks": "^1.3.15",
@@ -34,7 +32,6 @@
     "karma-cli": "^0.0.4",
     "karma-jasmine": "^0.3.5",
     "karma-phantomjs-launcher": "^0.1.4",
-    "karma-phantomjs2-launcher": "^0.1.4",
     "karma-spec-reporter": "0.0.19"
   },
   "scripts": {
