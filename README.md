@@ -1,3 +1,5 @@
+# ng-autofocus is deprecated! Please use [focus-if][focus-if-url] instead!
+
 # ng-autofocus
 [![NPM version][npm-image]][npm-url]
 [![Downloads][downloads-image]][npm-url]
@@ -57,3 +59,4 @@ To focus an element after a specified delay when a specified conditional `$scope
 [downloads-image]: http://img.shields.io/npm/dm/ng-autofocus.svg
 [npm-image]: http://img.shields.io/npm/v/ng-autofocus.svg
 [npm-url]: https://npmjs.org/package/ng-autofocus
+[focus-if-url]: https://npmjs.org/package/ng-focus-if
