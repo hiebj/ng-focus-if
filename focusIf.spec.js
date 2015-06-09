@@ -1,14 +1,14 @@
 (function() {
     'use strict';
-    describe('Directive: autofocus [A]', function() {
+    describe('Directive: focus-if [A]', function() {
         var $scope,
             $compile,
             $timeout,
             $document,
-            tpl = '<input type="text" autofocus="{{watchProperty}}" autofocus-delay="{{delay}}" />',
+            tpl = '<input type="text" focus-if="{{watchProperty}}" focus-delay="{{delay}}" />',
             element;
 
-        beforeEach(module('autofocus'));
+        beforeEach(module('focus-if'));
 
         beforeEach(function() {
             jasmine.addMatchers({
@@ -42,11 +42,11 @@
             element.remove();
         });
 
-        describe('<input autofocus>', function() {
+        describe('<input focus-if>', function() {
             it('should have focus immediately', onLinkTest);
         });
 
-        describe('<input autofocus autofocus-delay="500">', function() {
+        describe('<input focus-if focus-delay="500">', function() {
             it('should have focus after 500ms', function() {
                 $scope.delay = 500;
                 onLinkTest();
@@ -70,24 +70,24 @@
             $timeout.flush(1);
         }
 
-        describe('<input autofocus="watchProperty">', function() {
+        describe('<input focus-if="watchProperty">', function() {
             beforeEach(watchBeforeEach);
             it('should not have focus immediately when $scope.watchProperty is falsy', falsyWatchTest);
             it('should have focus immediately when $scope.watchProperty is truthy', truthyWatchTest);
         });
 
-        describe('<input autofocus="watchProperty" autofocus-delay="500">', function() {
+        describe('<input focus-if="watchProperty" focus-delay="500">', function() {
             beforeEach(function() {
                 $scope.delay = 500;
                 watchBeforeEach();
             });
-            it('should not have focus after 500ms when $scope.autofocus is falsy', falsyWatchTest);
-            it('should have focus after 500ms when $scope.autofocus is truthy', truthyWatchTest);
+            it('should not have focus after 500ms when $scope.focus-if is falsy', falsyWatchTest);
+            it('should have focus after 500ms when $scope.focus-if is truthy', truthyWatchTest);
         });
 
         function watchBeforeEach() {
-            $scope.watchProperty = 'autofocus';
-            $scope.autofocus = false;
+            $scope.watchProperty = 'focus';
+            $scope.focus = false;
             compile();
         }
 
@@ -98,7 +98,7 @@
 
         function truthyWatchTest() {
             falsyWatchTest();
-            $scope.autofocus = true;
+            $scope.focus = true;
             $scope.$digest();
             flush();
             expect(element).toHaveFocus();

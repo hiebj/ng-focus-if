@@ -1,16 +1,17 @@
 {
-  "name": "ng-autofocus",
+  "name": "ng-focus-if",
   "version": "0.0.14",
-  "homepage": "https://github.com/hiebj/ng-autofocus",
+  "homepage": "https://github.com/hiebj/ng-focus-if",
   "authors": [
     "Jonathan Hieb"
   ],
   "description": "A simple AngularJS attribute directive that will trigger focus on an element under specified conditions",
-  "main": "autofocus.js",
+  "main": "focusIf.js",
   "keywords": [
     "angular",
     "angularjs",
     "directive",
+    "focus-if",
     "autofocus",
     "focus",
     "delay"

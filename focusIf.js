@@ -1,28 +1,25 @@
 (function() {
     'use strict';
     angular
-        .module('autofocus', [])
-        .directive('autofocus', Autofocus);
+        .module('focus-if', [])
+        .directive('focusIf', focusIf);
 
-    function Autofocus($timeout) {
+    function focusIf($timeout) {
         function link($scope, $element, $attrs) {
             var dom = $element[0];
-
-            if ($attrs.autofocus) {
-                $scope.$watch($attrs.autofocus, focusIf);
+            if ($attrs.focusIf) {
+                $scope.$watch($attrs.focusIf, focus);
             } else {
-                focusIf(true);
+                focus(true);
             }
-
-            function focusIf(condition) {
+            function focus(condition) {
                 if (condition) {
                     $timeout(function() {
                         dom.focus();
-                    }, $scope.$eval($attrs.autofocusDelay) || 0);
+                    }, $scope.$eval($attrs.focusDelay) || 0);
                 }
             }
         }
-
         return {
             restrict: 'A',
             link: link
