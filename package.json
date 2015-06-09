@@ -1,6 +1,6 @@
 {
   "name": "ng-autofocus",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "A simple AngularJS attribute directive that will trigger focus on an element under specified conditions",
   "repository": {
     "type": "git",
