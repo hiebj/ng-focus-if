@@ -7,13 +7,13 @@ A simple attribute directive that will trigger focus on an element under specifi
 
 It is available through NPM:
 
-```shell
+```text
 npm install ng-focus-if
 ```
 
 Or, via bower:
 
-```shell
+```text
 bower install hiebj/ng-focus-if --save
 ```
 
