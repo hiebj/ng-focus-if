@@ -3,7 +3,7 @@
 [![Downloads][downloads-image]][npm-url]
 [![devDependency Status][david-image]][david-url]
 
-A simple attribute directive that will trigger focus on an element under specified conditions. It can also be used as a cross-browser replacement for the `autofocus` attribute.
+An attribute directive that will trigger focus on an element under specified conditions. It can also be used as a cross-browser replacement for the `autofocus` attribute.
 
 It is available through NPM:
 
