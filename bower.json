@@ -4,7 +4,7 @@
   "authors": [
     "Jonathan Hieb"
   ],
-  "description": "A simple AngularJS attribute directive that will trigger focus on an element under specified conditions",
+  "description": "AngularJS directive that will trigger focus on an element under specified conditions",
   "main": "focusIf.js",
   "keywords": [
     "angular",
