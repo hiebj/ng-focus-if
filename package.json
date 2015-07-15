@@ -6,6 +6,7 @@
     "type": "git",
     "url": "https://github.com/hiebj/ng-focus-if.git"
   },
+  "main": "./focusIf.js",
   "author": "Jonathan Hieb",
   "keywords": [
     "angular",
