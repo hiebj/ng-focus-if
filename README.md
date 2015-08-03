@@ -7,6 +7,8 @@
 
 An attribute directive that will trigger focus on an element under specified conditions. It can also be used as a cross-browser replacement for the `autofocus` attribute.
 
+View a live demo on [Plnkr][plnkr-url].
+
 It is available through NPM:
 
 ```text
@@ -63,5 +65,7 @@ To focus an element after a specified delay when a specified Angular expression 
 [david-image]: https://david-dm.org/hiebj/ng-focus-if/dev-status.svg
 [david-url]: https://david-dm.org/hiebj/ng-focus-if#info=devDependencies
 [stars-image]: https://img.shields.io/github/stars/hiebj/ng-focus-if.svg?style=social
+[plnkr-url]: http://plnkr.co/edit/MJS3zRk079Mu72o5A9l6?p=preview
 [mdn-input-url]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input 
 [expression-url]: https://docs.angularjs.org/guide/expression
+
