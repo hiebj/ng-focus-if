@@ -14,7 +14,7 @@ npm install ng-focus-if
 Or, via bower:
 
 ```text
-bower install hiebj/ng-focus-if --save
+bower install ng-focus-if --save
 ```
 
 ## Usage
