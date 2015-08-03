@@ -29,13 +29,13 @@ angular
     ]);
 ```
 
-To immediately focus an element upon rendering (similar to `autofocus`):
+To immediately focus an element upon rendering (similar to [input][mdn-input-url] `autofocus`):
 
 ```html
 <input focus-if />
 ```
 
-To focus an element when a specified conditional `$scope` property becomes truthy:
+To focus an element when a specified Angular [expression][expression-url] becomes truthy:
 
 ```html
 <input focus-if="focusInput" />
@@ -47,13 +47,16 @@ To focus an element after a specified delay upon rendering:
 <input focus-if focus-delay="500" />
 ```
 
-To focus an element after a specified delay when a specified conditional `$scope` property becomes truthy:
+To focus an element after a specified delay when a specified Angular expression becomes truthy:
 
 ```html
 <input focus-if="focusInput" focus-delay="500" />
 ```
+
 [david-image]: https://david-dm.org/hiebj/ng-focus-if/dev-status.svg
 [david-url]: https://david-dm.org/hiebj/ng-focus-if#info=devDependencies
 [downloads-image]: http://img.shields.io/npm/dm/ng-focus-if.svg
 [npm-image]: http://img.shields.io/npm/v/ng-focus-if.svg
 [npm-url]: https://npmjs.org/package/ng-focus-if
+[mdn-input-url]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input 
+[expression-url]: https://docs.angularjs.org/guide/expression
