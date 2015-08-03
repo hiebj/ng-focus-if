@@ -14,6 +14,12 @@ module.exports = function(config) {
     ],
     reporters: [
       'spec'
-    ]
+    ],
+    preprocessors: {
+      'app/**/!(*spec).js': ['coverage']
+    },
+    coverageReporter: {
+      type: 'text'
+    }
   });
 };
