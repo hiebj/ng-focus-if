@@ -1,6 +1,6 @@
 {
   "name": "ng-focus-if",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "AngularJS directive that will trigger focus on an element under specified conditions",
   "repository": {
     "type": "git",
