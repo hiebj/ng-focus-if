@@ -57,6 +57,12 @@ To focus an element after a specified delay when a specified Angular expression 
 <input focus-if="focusInput" focus-delay="500" />
 ```
 
+To focus an element and solve the problem in Internet Explorer with the caret not being at the end of the existing text:
+
+```html
+<input focus-if="focusInput" focus-caret-index="99999" />
+```
+
 [bower-image]: https://img.shields.io/bower/v/ng-focus-if.svg
 [github-url]: http://github.com/hiebj/ng-focus-if
 [npm-image]: http://img.shields.io/npm/v/ng-focus-if.svg
