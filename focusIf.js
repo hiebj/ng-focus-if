@@ -16,6 +16,10 @@
                 if (condition) {
                     $timeout(function() {
                         dom.focus();
+                        if ($attrs.focusCaretIndex && (typeof dom.value === 'string')) {
+                            var index = Math.min(parseInt($attrs.focusCaretIndex), dom.value.length);
+                            dom.setSelectionRange(index, index);
+                        }
                     }, $scope.$eval($attrs.focusDelay) || 0);
                 }
             }
