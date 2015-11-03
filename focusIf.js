@@ -2,7 +2,7 @@
     'use strict';
     angular
         .module('focus-if', [])
-        .directive('focusIf', focusIf);
+        .directive('focusIf', ["$timeout", focusIf]);
 
     function focusIf($timeout) {
         function link($scope, $element, $attrs) {
