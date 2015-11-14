@@ -4,6 +4,8 @@
         .module('focus-if', [])
         .directive('focusIf', focusIf);
 
+    focusIf.$inject = ['$timeout'];
+
     function focusIf($timeout) {
         function link($scope, $element, $attrs) {
             var dom = $element[0];
