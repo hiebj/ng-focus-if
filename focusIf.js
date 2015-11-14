@@ -25,4 +25,8 @@
             link: link
         };
     }
+
+    if (typeof module !== 'undefined' && module && module.exports) {
+        module.exports = 'focus-if';
+    }
 })();
