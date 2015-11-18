@@ -58,7 +58,7 @@ To focus an element after a specified delay when a specified Angular expression 
 ```
 
 [bower-image]: https://img.shields.io/bower/v/ng-focus-if.svg
-[github-url]: http://github.com/hiebj/ng-focus-if
+[github-url]: https://github.com/hiebj/ng-focus-if/stargazers
 [npm-image]: http://img.shields.io/npm/v/ng-focus-if.svg
 [npm-url]: https://npmjs.org/package/ng-focus-if
 [downloads-image]: http://img.shields.io/npm/dm/ng-focus-if.svg
