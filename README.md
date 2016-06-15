@@ -57,6 +57,10 @@ To focus an element after a specified delay when a specified Angular expression 
 <input focus-if="focusInput" focus-delay="500" />
 ```
 
+**Caveat: reapply focus**
+
+Like any other Angular directive using a `$watch` callback, this directive's ability to reapply focus is limited by Angular's change detection. Users looking to apply focus to a given element more than once may find [this thread][change-detection-url] useful.
+
 [bower-image]: https://img.shields.io/bower/v/ng-focus-if.svg
 [github-url]: https://github.com/hiebj/ng-focus-if/stargazers
 [npm-image]: http://img.shields.io/npm/v/ng-focus-if.svg
@@ -68,4 +72,4 @@ To focus an element after a specified delay when a specified Angular expression 
 [plnkr-url]: http://plnkr.co/edit/MJS3zRk079Mu72o5A9l6?p=preview
 [mdn-input-url]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input 
 [expression-url]: https://docs.angularjs.org/guide/expression
-
+[change-detection-url]: https://github.com/hiebj/ng-focus-if/issues/22#issuecomment-226221602
