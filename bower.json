@@ -27,7 +27,7 @@
     "test",
     "tests"
   ],
-  "dependencies": [
+  "dependencies": {
     "angular": "1.x"
-  ]
+  }
 }
