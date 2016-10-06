@@ -39,7 +39,7 @@ To immediately focus an element upon rendering (similar to [input][mdn-input-url
 <input focus-if />
 ```
 
-To focus an element when a specified Angular [expression][expression-url] becomes truthy:
+To focus an element when a specified Angular [expression][expression-url] becomes [truthy][truthy-url]:
 
 ```html
 <input focus-if="focusInput" />
@@ -72,4 +72,5 @@ Like any other Angular directive using a `$watch` callback, this directive depen
 [plnkr-url]: http://plnkr.co/edit/MJS3zRk079Mu72o5A9l6?p=preview
 [mdn-input-url]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input 
 [expression-url]: https://docs.angularjs.org/guide/expression
+[truthy-url]: https://developer.mozilla.org/en-US/docs/Glossary/Truthy
 [change-detection-url]: https://github.com/hiebj/ng-focus-if/issues/22#issuecomment-226221602
