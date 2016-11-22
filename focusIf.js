@@ -8,7 +8,7 @@
 
     function focusIf($timeout) {
         function link($scope, $element, $attrs) {
-            var dom = $element[0];
+            var dom = $element;
             if ($attrs.focusIf) {
                 $scope.$watch($attrs.focusIf, focus);
             } else {
@@ -17,7 +17,8 @@
             function focus(condition) {
                 if (condition) {
                     $timeout(function() {
-                        dom.focus();
+                        var currVal = dom.val();
+                        dom.focus().val('').val(currVal);
                     }, $scope.$eval($attrs.focusDelay) || 0);
                 }
             }
