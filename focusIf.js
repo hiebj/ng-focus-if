@@ -2,7 +2,7 @@
     'use strict';
     angular
         .module('focus-if', [])
-        .directive('focusIf', focusIf);
+        .directive('focusIf', ["$timeout", focusIf]);
 
     focusIf.$inject = ['$timeout'];
 
